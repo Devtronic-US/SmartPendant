@@ -9,7 +9,7 @@ This project allow to control grblHAL based CNC machine withot PC. It also make 
 
 https://oshwlab.com/nick_shl/smart_pendant
 
-#Parts
+# Parts
 
 To make this project yourself, you will need this essential parts:
 
