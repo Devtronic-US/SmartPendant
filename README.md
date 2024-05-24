@@ -2,6 +2,8 @@
 
 This project allow to control grblHAL based CNC machine withot PC. It also make work way more convinient.
 
+**Store:** https://devtronic.square.site/
+
 ![Image](Media/Devtronic_SmartPendant_1.png "Devtronic SmartPendant")
 ![Image](Media/Devtronic_SmartPendant_2.png "Devtronic SmartPendant")
 
