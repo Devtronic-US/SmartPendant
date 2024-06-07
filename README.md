@@ -7,7 +7,7 @@ This project allow to control grblHAL based CNC machine withot PC. It also make 
 ![Image](Media/Devtronic_SmartPendant_1.png "Devtronic SmartPendant")
 ![Image](Media/Devtronic_SmartPendant_2.png "Devtronic SmartPendant")
 
-## Firmware
+# Firmware
 
 Source code for this project can be found there: **https://github.com/nickshl/SmartPendant**
 Latest firmware placed in Release filder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
