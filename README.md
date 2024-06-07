@@ -10,6 +10,7 @@ This project allow to control grblHAL based CNC machine withot PC. It also make 
 # Firmware
 
 Source code for this project can be found there: **https://github.com/nickshl/SmartPendant**
+
 Latest firmware placed in Release filder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
 
 To load new firmware [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) is used.
