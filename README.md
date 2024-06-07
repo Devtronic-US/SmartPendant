@@ -11,7 +11,7 @@ This project allow to control grblHAL based CNC machine withot PC. It also make 
 
 Source code for this project can be found there: **https://github.com/nickshl/SmartPendant**
 
-Latest firmware placed in Release filder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
+Latest firmware placed in Release folder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
 
 To load new firmware [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) is used.
 Connect CNC controller to PC using USB-C cable. Press and hold BOOT0 button, then short press NRST button, couple seconds later BOOT0 button can be released.
