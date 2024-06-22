@@ -14,12 +14,14 @@ Source code for this project can be found there: **https://github.com/nickshl/Sm
 Latest firmware placed in Release folder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
 
 To load new firmware [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) is used.
-Connect CNC controller to PC using USB-C cable. Press and hold BOOT0 button, then short press NRST button, couple seconds later BOOT0 button can be released.
+Connect SmartPendant to PC using USB-C cable. Press and hold BOOT0 button, then short press NRST button, couple seconds later BOOT0 button can be released.
 Open STM32CubeProgrammer. In top right corner choose "USB" from drop down list.
 If field "Port" in "USB Configuration" show "No DFU detected" click update button near it.
 Click "Connect" button - STM32CubeProgrammer should establish connection and show current device memory content.
 Click "Open File" in left to corner, select firmware HEX file, then click "Download" button in top left corner.
 When flashing is done, close STM32CubeProgrammer and short press NRST button on the Controller to restart it. 
+
+**Note:** if flashing is successful, but firmware isn't work, check STM32CubeProgrammer log. If it says "sector 0000 does not exist" erasing operation wasn't successful and new firmware "merged"(write operation can only flip bits from 1 to 0) with old one. To fix this issue, press "eraser" button in bottom right corner and click "Ok" button in pop up window. After erasing is finished "Device memory" should show only FFFFFFFF. Flash new firmware after that. 
 
 # PCB files
 
