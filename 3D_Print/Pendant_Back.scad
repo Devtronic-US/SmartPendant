@@ -1,10 +1,11 @@
-$fn=30;
+$fn=300;
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
 // Disable parts for fast update during development
 FOR_PRINT = 1;
 DRAW_BUTTON_HOLES = 1;
+DEBUG_PORT = 0;
 
 T = 2.4; // Case thickness
 R = 2.6; // Case radius
@@ -334,16 +335,19 @@ module Bottom()
       // Buttons
       translate([0,77,0]) 
       {
-        translate([+2.325,-15,0]) cylinder(d=3+LAYER_W*6, h=6);
-        translate([-2.325,-15,0]) cylinder(d=3+LAYER_W*6, h=6);
-        translate([+2.325,-40.7,0]) cylinder(d=3+LAYER_W*6, h=6);
+        translate([+2.325,-15,0]) cylinder(d=3+LAYER_W*6, h=5.4);
+        translate([-2.325,-15,0]) cylinder(d=3+LAYER_W*6, h=5.4);
+        translate([+2.325,-40.7,0]) cylinder(d=3+LAYER_W*6, h=5.4);
         // LEDs
-        translate([+5,-41.7,0]) cylinder(d=1+LAYER_W*6, h=6);
-        translate([-5,-41.7,0]) cylinder(d=1+LAYER_W*6, h=6);
+        translate([+5,-41.7,0]) cylinder(d=1+LAYER_W*6, h=5.4);
+        translate([-5,-41.7,0]) cylinder(d=1+LAYER_W*6, h=5.4);
       }
     }
-    // Debug port cutout(connector only)
-    translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
+    if(DEBUG_PORT)
+    {
+      // Debug port cutout(connector only)
+      translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
+    }
     // Buttons
     translate([0,77,-1]) 
     {
@@ -374,9 +378,12 @@ module Bottom()
     //translate([0,-50.5/2,0]) cylinder(d=7.7, h=H);
     //#translate([0,0,0]) cylinder(d=43, h=H);
   }
-  // Debug port cutout(connector only)
-  translate([-W/2,106.3-26/2,1.2]) cube([8,26,BOTTOM_H-1.2]);
-  //translate([-W/2-R,106.3-26/2,BOTTOM_H]) cube([T,26,1.2]);
+  if(DEBUG_PORT)
+  {
+    // Debug port cutout(connector only)
+    translate([-W/2,106.3-26/2,1.2]) cube([8,26,BOTTOM_H-1.2]);
+    //translate([-W/2-R,106.3-26/2,BOTTOM_H]) cube([T,26,1.2]);
+  }
   // Nut hole
   difference()
   {
@@ -409,7 +416,7 @@ module Bottom()
       difference()
       {
         translate([BW/2-3.5,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
-        translate([BW/2-3.5-2,55.8-7/2,BOTTOM_H+H-BZPOS-BT-2]) cube([3.5,7,BOTTOM_H+H-BZPOS-BT]);
+        translate([BW/2-3.5-2,55.8-7/2,BOTTOM_H+H-BZPOS-BT-4]) cube([2+1.1,7,BOTTOM_H+H-BZPOS-BT]);
       }
     }
     translate([-100,55.8,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0,90,0]) cylinder(d=2.6, h=200);

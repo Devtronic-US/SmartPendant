@@ -13,7 +13,7 @@ difference()
 {
   union()
   {
-    translate([-6,-6,0]) cube([12, 11-1.6, BT]);
+    translate([-6,-6+2.6,0]) cube([12, 12-2.6*2, BT]);
     translate([-4,-5,BT]) cube([8, 10, T]);
     translate([-6,-6,BT+T]) cube([12, 12, UT]);
     translate([0,0,BT+T+UT]) cylinder(d1=10, d2 = D_CABLE+LAYER_W*2, h = 10);

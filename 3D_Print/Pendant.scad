@@ -1,10 +1,11 @@
-$fn=30;
+$fn=300;
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
 // Disable parts for fast update during development
 FOR_PRINT = 1;
 DRAW_BUTTON_HOLES = 1;
+DEBUG_PORT = 0;
 
 T = 2.4; // Case thickness
 R = 2.6; // Case radius
@@ -239,11 +240,14 @@ module Top()
     }
     // SD Card cutout
     translate([-W,CP,BZPOS+BT+0.4]) cube([W,12,1.8]);
-    // Debug port cutout(full port)
-    //#translate([W/2-9,CP,BZPOS+BT]) cube([13,20,9]);
-    // Debug port cutout(connector only)
-    translate([W/2-9,106.3-18.2/2,BZPOS+BT+1.2]) cube([15,18.2,8.4]);
-    //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4+LAYER_H]) cube([15,4.8,0.6-LAYER_H]);
+    if(DEBUG_PORT)
+    {
+      // Debug port cutout(full port)
+      //#translate([W/2-9,CP,BZPOS+BT]) cube([13,20,9]);
+      // Debug port cutout(connector only)
+      translate([W/2-9,106.3-18.2/2,BZPOS+BT+1.2]) cube([15,18.2,8.4]);
+      //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4+LAYER_H]) cube([15,4.8,0.6-LAYER_H]);
+    }
     // Buttons holes
     if(DRAW_BUTTON_HOLES || FOR_PRINT)
     {
