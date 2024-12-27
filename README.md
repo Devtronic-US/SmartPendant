@@ -25,7 +25,7 @@ When flashing is done, close STM32CubeProgrammer and short press NRST button on 
 
 # PCB files
 
-https://oshwlab.com/nick_shl/smart_pendant
+Files for PCB version 1.2: https://oshwlab.com/nick_shl/smart_pendant
 
 # Parts
 
@@ -53,6 +53,10 @@ Approx. 6-3/8" x 2-5/8" x 3/4"
 
 ## Schematic
 
+Schematic vesion 1.3:
+![Image](Media/Schematic_Smart_Pendant_v1_3.png "Devtronic SmartPendant Schematic")
+
+Schematic vesion 1.1:
 ![Image](Media/Schematic_Smart_Pendant_v1_1.png "Devtronic SmartPendant Schematic")
 
 ## Firmware
