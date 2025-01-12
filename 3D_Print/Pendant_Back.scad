@@ -412,12 +412,12 @@ module Bottom()
   {
     union()
     {
-      translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
       difference()
       {
-        translate([BW/2-3.5,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
-        translate([BW/2-3.5-2,55.8-7/2,BOTTOM_H+H-BZPOS-BT-4]) cube([2+1.1,7,BOTTOM_H+H-BZPOS-BT]);
+        translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
+        translate([-BW/2+3.5-1.1,55.8-7/2,BOTTOM_H+H-BZPOS-BT-4]) cube([2+1.1,7,BOTTOM_H+H-BZPOS-BT]);
       }
+      translate([BW/2-3.5,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
     }
     translate([-100,55.8,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0,90,0]) cylinder(d=2.6, h=200);
   }
