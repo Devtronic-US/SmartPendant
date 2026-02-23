@@ -7,6 +7,14 @@ This project allow to control grblHAL based CNC machine withot PC. It also make 
 ![Image](Media/Devtronic_SmartPendant_1.png "Devtronic SmartPendant")
 ![Image](Media/Devtronic_SmartPendant_2.png "Devtronic SmartPendant")
 
+# Case versions
+
+Version that includes "Raft" in the name has solid first layer, all openings have to be open with a knife.
+This gives more uniform surface. For front part print it recommended to turn on tree support for encoder opening.
+
+Cable relief should be printed with TPU. After the print, groove have to be opened by cutting and pulling the material.
+Cable relief designed for 4 mm cable. If your cable is different - generate new one, function CableReliefCircular(X) accept cable diameter in mm.
+
 # Firmware
 
 Source code for this project can be found there: **https://github.com/nickshl/SmartPendant**
@@ -63,3 +71,10 @@ Schematic vesion 1.1:
 
 Source code can be [found there](https://github.com/nickshl/SmartPendant)
 
+# Off the shelf version
+
+It is a possible to assemble pendant from off the helf components with lot of soldering by using this display:
+
+[3.5-inch TFT LCD Module Serial Port SPI Drive ILI9488 with capacitive Touch RGB320 * 480](https://www.aliexpress.us/item/3256804935586911.html)
+
+File SmartPendant_off-the-shelf.scad have code to generate case that was used during prototype stage.
