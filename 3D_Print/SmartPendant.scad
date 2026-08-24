@@ -26,8 +26,9 @@ DEBUG_PORT = 0;
 // Possible options(affect back panel only):
 // 1.2 - this version has capacitor under one of screw and need small cutout to fit
 // 1.3 - this version has battery holder too close to one of screw and need small cutout to fit
-// anythyng else - suitable for 1.4 and later, fay fit version 1.3 with removed battery holder
-VERSION = 1.4;
+// 1.4 - will fit version 1.5 and version 1.3 with removed battery holder
+// 1.6 - this version has MCU soldered directly to main PCB
+VERSION = 1.6;
 
 // Used parameters for print
 LAYER_H = 0.2; // Print layer thickness
@@ -446,8 +447,9 @@ module Bottom()
         // Reset & Boot buttons
         hull()
         {
-          translate([+5.4/2,55.4,0]) cylinder(d=3+LAYER_W*6, h=5.4);
-          translate([-5.4/2,55.4,0]) cylinder(d=3+LAYER_W*6, h=5.4);
+          translate([+5.4/2,55.4,0]) cylinder(d=3+LAYER_W*6, h=BOTTOM_H+H-BZPOS-BT - 2.2 - 0.8);
+          translate([-5.4/2,55.4,0]) cylinder(d=3+LAYER_W*6, h=BOTTOM_H+H-BZPOS-BT - 2.2 - 0.8);
+          echo("Button Height: ", BOTTOM_H+H-BZPOS-BT - 2.2);
         }
       }
     }
@@ -474,8 +476,8 @@ module Bottom()
     else
     {
       // Reset & Boot buttons
-      translate([+5.4/2,55.4,0]) cylinder(d=3, h=10);
-      translate([-5.4/2,55.4,0]) cylinder(d=3, h=10);
+      translate([+5.4/2,55.4,-1]) cylinder(d=3, h=20);
+      translate([-5.4/2,55.4,-1]) cylinder(d=3, h=20);
     }
     // Ligntening
     translate([0,0,1.2]) hull()
